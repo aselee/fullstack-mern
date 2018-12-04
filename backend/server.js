@@ -9,7 +9,7 @@ const app = express();
 const router = express.Router();
 
 // this is our MongDb database
-const dbRoute = "mongodb://jelo:a9bc839993@ds151382.mlab.com:51382/jelotest";
+const dbRoute = mongodb:<alee>:<mern79924>@ds229458.mlab.com:29458/medium-mern-pract
 
 // connects our back end code with the database
 mongoose.connect(
@@ -66,6 +66,7 @@ router.delete("/deleteData", (req, res) => {
 
 // Create method
 // this method adds new data in our database
+
 router.post("/putData", (req, res) => {
   let data = new Data();
 
@@ -79,4 +80,14 @@ router.post("/putData", (req, res) => {
   }
   data.message = message;
   data.id = id;
+  data.save(err => {
+    if (err) return res.json({ success: false, error: err });
+    return res.json({ success: true });
+  });
 });
+
+// append /api for our http requests
+app.use ("/api", router);
+
+//launch our back end into an port
+app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
