@@ -9,7 +9,7 @@ const app = express();
 const router = express.Router();
 
 // this is our MongDb database
-const dbRoute = "mongodb://<dbuser>:<dbpassword>@ds229458.mlab.com:29458/medium-mern-pract";
+const dbRoute = "mongodb://<lee79924>:<Mern79924>@ds229458.mlab.com:29458/medium-mern-pract";
 
 // connects our back end code with the database
 mongoose.connect(
@@ -22,7 +22,7 @@ let db = mongoose.connection;
 db.once("open", () => console.log("connected to the database"));
 
 // checks if connection with the database is successful
-db.on("error", console.error.bind(console, "MongoDB conection error:"));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 //(optional) only made for logging and 
 // bodyParser, parses the request body to be a readable json format
