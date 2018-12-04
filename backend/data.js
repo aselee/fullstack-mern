@@ -1,6 +1,4 @@
-import { StringDecoder } from 'string_decoder';
-
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // this will be our database's data structure

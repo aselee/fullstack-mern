@@ -9,7 +9,7 @@ const app = express();
 const router = express.Router();
 
 // this is our MongDb database
-const dbRoute = mongodb:<alee>:<mern79924>@ds229458.mlab.com:29458/medium-mern-pract
+const dbRoute = "mongodb://<dbuser>:<dbpassword>@ds229458.mlab.com:29458/medium-mern-pract";
 
 // connects our back end code with the database
 mongoose.connect(
@@ -56,6 +56,7 @@ router.post("/updateData", (req, res) => {
 
 // Delete method
 // this method removes exisiting data in our database
+
 router.delete("/deleteData", (req, res) => {
   const { id } = req.body;
   Data.findOneAndDelete(id, err => {
