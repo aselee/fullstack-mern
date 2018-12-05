@@ -120,11 +120,37 @@ class App extends Component {
             style={{ width: "200px"}}
           />
           <button onClick={() => this.putDataToDB(this.state.message)}>
-            Add
+            ADDDDDDD
           </button>
         </div>
+        <div style={{ padding: "10px "}}>
+          <input
+            type="text"
+            style={{ width: "200px" }}
+            onChange={e => this.setState({ idToDelete: e.target.value })}
+            placeholder="put id of item to delete here"
+          />
+          <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
+            DELETEEEE
+          </button>
+        </div>
+        <div style={{ padding: "10px"}}>
+          <input
+            type="text"
+            style={{ width: "200px" }}
+            onChange={e => this.setState({ idToUpdate: e.target.value })}
+            placeholder="id of item to update here"
+          />
+        </div>
+        <button>
+          onClick={() => 
+            this.updateDB(this.state.idToUpdate, this.state.updateToApply)
+          }
+        >
+          UPDATEEEEEE
+        </button>
       </div>
-    )
+    );
   }
 }
 
